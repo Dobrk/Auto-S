@@ -1,0 +1,82 @@
+﻿@@headerPhoto.html@@
+<div class="wrapper">
+	<div class="detail-wrapper">
+		<h3 class="color-1"> @@manufacturer_text@@ @@model_text@@ @@type_info@@</h3>
+		<div class="nest">
+			<div class="grid-6">
+				<div class="left-padding">
+					Karoserie: @@karoserie@@
+					<br> Rok výroby: @@made_date@@
+					<br> Palivo: @@fuel_text@@
+					<br> Barva: @@color_text@@
+					<br> Typ auta: @@kind_text@@ @@pocet_mist@@
+					<br> Stav tachometru: @@tachometr@@ km
+					<br> Objem motoru: @@engine_volume@@ ccm
+					<br> Výkon: @@engine_power@@ kW
+					<br> VIN: @@vin@@
+					<br> STK: @@stk_to@@
+					<br> Stav: <span class="color-1">@@condition_text@@</span>
+					<br> Cena: <span class="color-1">@@price@@ kč</span>
+					<br> @@priceDPH@@
+				</div>
+			</div>
+			<div class="grid-6">
+				<div class="left-padding">
+					<a href="foto.html"><img width="260" height="195" alt="auto-s.cz" class="detail_image" src="@@firstFoto@@"></a>
+					<ul class="list-1">
+						<li><a href="foto.html">Zobrazit fotogalerii</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="grid-12">
+			<div class="equipment_text">
+				<span class="color-1">Popis:</span>
+				<br> @@note@@
+				<br><br> <span class="color-1">Příslušenství:</span> @@equipment@@
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="detail-wrapper">
+		<div class="nest">
+			<div class="grid-12">
+				<h3 class="color-1">Kontakt</h3>
+			</div>
+			<div class="grid-12">
+				<div class="grid-6">
+					Email: <span class="color-1">c11@seznam.cz</span>
+					<div id="outputEmail" class="qr_code"></div>
+					<script>
+						jQuery(function () {
+							jQuery('#outputEmail').qrcode("MATMSG:TO:c11@seznam.cz;SUB: @@manufacturer_text@@ @@model_text@@ @@type_info@@;BODY:Dobry den, mel bych zajem o vuz @@manufacturer_text@@ @@model_text@@ @@type_info@@ (http://www.auto-s.cz/cars/@@custom_car_id@@/detail.html). Prosim kontaktujte me. Dekuji.;;");
+						})
+					</script>
+				</div>
+				<div class="grid-6">
+					Tel: <span class="color-1">+420 777 601 200</span><br>
+					<div id="outputPhone" class="qr_code"></div>
+					<script>
+						jQuery(function () {
+							jQuery('#outputPhone').qrcode("tel:+420777601200");
+						})
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="detail-wrapper">
+		Údaje obsažené v této kartě mají informativní charakter. Tato indikativní nabídka není nabídkou ve smyslu § 1731 nebo § 1732
+		občanského zákoníku, ani se nejedná o veřejný příslib dle § 1733 občanského zákoníku. Z této indikativní nabídky nevzniká
+		nárok na uzavření smlouvy.
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.qrcode.min.js"></script>
+@@footerPhoto.html@@
